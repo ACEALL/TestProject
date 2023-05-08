@@ -30,10 +30,11 @@ CREATE TABLE `users` (
   `last_name` varchar(40) NOT NULL,
   `email` varchar(60) NOT NULL,
   `pass` char(40) NOT NULL,
+  `permission_level` int NOT NULL,
   `registration_date` datetime NOT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +43,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Anthony','Wright','aawright16@gmail.com','7c4a8d09ca3762af61e59520943dc26494f8941b','2023-05-06 23:06:00');
+INSERT INTO `users` VALUES (1,'Anthony','Wright','aawright16@gmail.com','7c4a8d09ca3762af61e59520943dc26494f8941b',1,'2023-05-07 17:06:29'),(2,'Admin','Admin','Admin@admin.com','d033e22ae348aeb5660fc2140aec35850c4da997',2,'2023-05-07 18:27:00'),(3,'test','test','test@test.com','356a192b7913b04c54574d18c28d46e6395428ab',1,'2023-05-07 18:51:14');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-06 23:28:25
+-- Dump completed on 2023-05-07 19:00:40
