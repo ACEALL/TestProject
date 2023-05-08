@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	if (empty($errors)) { 
 		// Register the user in the database
-		$query = "INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES ('$firstName', '$lastName', '$email', SHA1('$password'), NOW() )";		
+		$query = "INSERT INTO users (first_name, last_name, email, pass, permission_level, registration_date) VALUES ('$firstName', '$lastName', '$email', SHA1('$password'), 1,  NOW() )";		
 		$run = @mysqli_query ($dbc, $query); 
 		if ($run) { 
 			echo '<p>You are now registered</p>';	
